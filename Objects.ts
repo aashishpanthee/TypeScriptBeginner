@@ -101,6 +101,24 @@ console.log(user);
 console.log(user.id);
 /* user.id=333;     this will throw error because id is readonly */
 
+// Intersection type
 
+type Circle={
+    radius:number;
+};
+
+type Colorful={
+    color:string;
+};
+
+type ColorfulCircle= Circle & Colorful & {
+    border:number ; /* this is extra property declared only for ColorfulCircle*/
+}; /* this is intersection type */
+
+const happyFace:ColorfulCircle={
+    radius:43,
+    color:"red",
+    border:5,
+}
 
 

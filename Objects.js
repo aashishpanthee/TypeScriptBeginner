@@ -38,4 +38,8 @@ var user = {
 };
 console.log(user);
 console.log(user.id);
-/* user.id=333;     this will throw error because id is readonly */
+var happyFace = {
+    radius: 43,
+    color: "red",
+    border: 5,
+};

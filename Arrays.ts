@@ -26,3 +26,34 @@ console.log(array5);
 // Multidimensional array
 const array6:number[][]=[[1,2],[3,4]];  /* Two dimensional array */
 const array7:string[][][]=[[["Sumit","Sujan"],["Someone","random"]],[["Aashish","Prem"],["anyone","Harry"]]];  /* Two dimensional array */
+
+// Array Exercise
+
+/* Create an empty array of numbers called ages. */
+const ages:number[]=[];
+
+/* Create an array variable called gameBoard that starts as an empty array.
+   It should be typed to hold a 2 dimensional array of strings. */
+const gameBoard:string[][]=[];
+
+
+/* Create a product type that contains a name and a price. */
+type Product={
+    name:string;
+    price:number;
+}
+
+/* Write a function called getTotal that accepts an array of Product types
+   It should return the sum of all the product prices */
+
+   const getTotal=(products:Array<Product>):number=>{
+    let total:number=0;
+    for (const product of products){
+        total+=product.price;
+    }
+    return total;
+   }
+
+   let result=getTotal([{name:"Coffee mug",price:300},{name:"Soap",price:33}]);
+   console.log(result);
+   

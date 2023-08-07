@@ -55,3 +55,9 @@ var doSomething = function (name, age, isFunny) {
 };
 doSomething("ChickenFace", 20, true); /* Output is correct */
 doSomething("ChickenFace"); /* Expected 3 arguments, but got 1. */
+// Function with Default Parameters
+var greetMe = function (name) {
+    if (name === void 0) { name = "stranger"; }
+    console.log("Greet me ".concat(name));
+};
+greetMe(); /* Output : Greet me stranger */

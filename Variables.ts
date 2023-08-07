@@ -67,3 +67,10 @@ const doSomething=(name:string,age:number,isFunny:boolean){
 };
 doSomething("ChickenFace",20,true); /* Output is correct */
 doSomething("ChickenFace"); /* Expected 3 arguments, but got 1. */
+
+
+// Function with Default Parameters
+const greetMe=(name:string="stranger")=>{
+    console.log(`Greet me ${name}`);
+}
+greetMe();      /* Output : Greet me stranger */

@@ -101,3 +101,10 @@ mixed.map(mix=>{  /* when we hover over mix, it show type of mix as string or nu
     return mix.toUpperCase(); /* Property 'toUpperCase' does not exist on type 'string | number'. Property 'toUpperCase' does not exist on type 'number'. */ 
 })
 
+// Never Type
+// We might use it to anotate a function that always throws an exception, or a function that never stops executing.
+/* function gameLoop():never{  This function never returns anything, it just runs forever 
+    while(true){
+        console.log("Game is running");
+    }
+} */

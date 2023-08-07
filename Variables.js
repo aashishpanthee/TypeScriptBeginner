@@ -82,3 +82,10 @@ var mixed = ["Aashish", 10, "Prem"];
 mixed.map(function (mix) {
     return mix.toUpperCase(); /* Property 'toUpperCase' does not exist on type 'string | number'. Property 'toUpperCase' does not exist on type 'number'. */
 });
+// Never Type
+// We might use it to anotate a function that always throws an exception, or a function that never stops executing.
+/* function gameLoop():never{  This function never returns anything, it just runs forever
+    while(true){
+        console.log("Game is running");
+    }
+} */

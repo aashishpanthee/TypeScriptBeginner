@@ -34,3 +34,13 @@ function calculateTax(price, tax) {
 }
 console.log(calculateTax(45, 0.5));
 console.log(calculateTax("$45", 0.5));
+// Union Types and Arrays
+var nums = [1, 2, 3];
+// what if we want both number and strings or objects in an array ?
+var stuff = [1, "two", true, { x: 2, y: 4 }];
+// this is correct, but we should avoid the ` Type any ` as much as possible
+var mixed = [1, "two", true, "four", false, 4];
+var coordinates1 = [];
+coordinates1.push({ x: 433.44, y: 434.33 });
+coordinates1.push({ lat: 567.36, long: 234.45 });
+// coordinates1.push({lat:567.36,long:234.45,some:444}); this will throw error because some is not in the type Loc or Point 

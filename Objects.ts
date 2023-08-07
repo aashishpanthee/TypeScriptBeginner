@@ -1,5 +1,5 @@
 // Object type annotation
-let coordinate:{x:number,y:number}={x:20,y:50};
+let coordinate : {x:number,y:number}={x:20,y:50};
 
 //  A function with an object type parameter
 const object1=(person: {first:string,last:string}):void=>{
@@ -47,3 +47,36 @@ function doublePoint(point:Point):Point{
 }
 let poi=doublePoint({x:10,y:10});
 console.log(poi);
+
+// Nested Objects type Alias
+// both these functions want same object, so why to give type annotation for a function parameter individually,
+//  instead create a type alias
+
+type Song={
+    title:string;
+    artist:string;
+    numStreams:number;
+    credits:{
+        producer:string;
+        writer:string;
+    }
+}
+
+const mysong:Song={
+    title:"Aashish",artist:"Panthee",numStreams:100,credits:{producer:"Aashish",writer:"Panthee",
+}};
+
+function calculatePayout(song:Song):number{
+return song.numStreams*1;
+}
+let resul=calculatePayout(mysong);
+console.log(resul);
+
+const printSong=(song:Song):void=>{
+console.log(`${song.title} by ${song.artist} has ${song.numStreams} streams`);
+}
+printSong(mysong);
+
+
+
+

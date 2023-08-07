@@ -17,3 +17,16 @@ function doublePoint(point) {
 }
 var poi = doublePoint({ x: 10, y: 10 });
 console.log(poi);
+var mysong = {
+    title: "Aashish", artist: "Panthee", numStreams: 100, credits: { producer: "Aashish", writer: "Panthee",
+    }
+};
+function calculatePayout(song) {
+    return song.numStreams * 1;
+}
+var resul = calculatePayout(mysong);
+console.log(resul);
+var printSong = function (song) {
+    console.log("".concat(song.title, " by ").concat(song.artist, " has ").concat(song.numStreams, " streams"));
+};
+printSong(mysong);

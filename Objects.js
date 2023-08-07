@@ -30,3 +30,5 @@ var printSong = function (song) {
     console.log("".concat(song.title, " by ").concat(song.artist, " has ").concat(song.numStreams, " streams"));
 };
 printSong(mysong);
+var person2 = { name: "Aashish", age: 22, grade: 12 };
+var person3 = { name: "Aashish", age: 22 }; /* this is also correct */

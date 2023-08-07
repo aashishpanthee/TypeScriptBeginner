@@ -77,6 +77,15 @@ console.log(`${song.title} by ${song.artist} has ${song.numStreams} streams`);
 }
 printSong(mysong);
 
+// Optional Property in object
+// we can make a property optional by adding ? after the property name
+type Person2={
+    name:string;
+    age:number;
+    grade?:number /* this is optional property */
+}
+const person2:Person2={name:"Aashish",age:22,grade:12};
+const person3:Person2={name:"Aashish",age:22};  /* this is also correct */
 
 
 

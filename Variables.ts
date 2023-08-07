@@ -41,3 +41,22 @@ for (let movie of array1){
 favourite=1; 
 favourite(); 
 // so this can be bit dangerous. so we can use any type but it's not recommended.
+
+
+// Function Parameter Annotation
+// Previously what we do/did
+function printNumber(num){
+    console.log(`My favourite number is ${num}`);
+}
+printNumber("ten");
+// Output : My favourite number is ten
+
+// Now here what we do
+function printNumber1(num:number){
+    console.log(`My favourite number is ${num}`);
+    num.toUpperCase(); /* Property 'toUpperCase' does not exist on type 'number' */
+}
+printNumber1(10);
+// Output : My favourite number is 10
+
+printNumber1("ten"); /* Argument of type 'string' is not assignable to parameter of type 'number' */

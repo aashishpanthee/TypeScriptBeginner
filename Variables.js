@@ -35,3 +35,18 @@ for (var _i = 0, array1_1 = array1; _i < array1_1.length; _i++) {
 favourite = 1;
 favourite();
 // so this can be bit dangerous. so we can use any type but it's not recommended.
+// Function Parameter Annotation
+// Previously what we do/did
+function printNumber(num) {
+    console.log("My favourite number is ".concat(num));
+}
+printNumber("ten");
+// Output : My favourite number is ten
+// Now here what we do
+function printNumber1(num) {
+    console.log("My favourite number is ".concat(num));
+    num.toUpperCase(); /* Property 'toUpperCase' does not exist on type 'number' */
+}
+printNumber1(10);
+// Output : My favourite number is 10
+printNumber1("ten"); /* Argument of type 'string' is not assignable to parameter of type 'number' */

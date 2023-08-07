@@ -22,3 +22,7 @@ const array5:Point[]=[];
 array5.push({x:4,y:5});
 //  array5.push({x:4});  Error: property y is missing
 console.log(array5);
+
+// Multidimensional array
+const array6:number[][]=[[1,2],[3,4]];  /* Two dimensional array */
+const array7:string[][][]=[[["Sumit","Sujan"],["Someone","random"]],[["Aashish","Prem"],["anyone","Harry"]]];  /* Two dimensional array */

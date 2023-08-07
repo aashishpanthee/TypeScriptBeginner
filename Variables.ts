@@ -60,3 +60,10 @@ printNumber1(10);
 // Output : My favourite number is 10
 
 printNumber1("ten"); /* Argument of type 'string' is not assignable to parameter of type 'number' */
+
+
+const doSomething=(name:string,age:number,isFunny:boolean){
+    console.log(`Hello ${name} of age ${age} is not funny which is ${isFunny}`);
+};
+doSomething("ChickenFace",20,true); /* Output is correct */
+doSomething("ChickenFace"); /* Expected 3 arguments, but got 1. */

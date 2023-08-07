@@ -72,3 +72,13 @@ var rando = function (a) {
     }
     return a;
 };
+// Anonymous Function Contextual Typing
+var names = ["Aashish", "Sumit", "Sagar", "Aryal"];
+names.map(function (name) {
+    return name.toUpperCase();
+    //  return name.toFixed(); /* Property 'toFixed' does not exist on type 'string' */
+});
+var mixed = ["Aashish", 10, "Prem"];
+mixed.map(function (mix) {
+    return mix.toUpperCase(); /* Property 'toUpperCase' does not exist on type 'string | number'. Property 'toUpperCase' does not exist on type 'number'. */
+});

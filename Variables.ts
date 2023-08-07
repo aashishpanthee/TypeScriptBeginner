@@ -88,4 +88,16 @@ const rando=(a:number)=>{  /* Here typescript is smart enought to know that retu
     return a;
 }
 
+// Anonymous Function Contextual Typing
+const names=["Aashish","Sumit","Sagar","Aryal"];
+names.map(name=>{  /* Typescript can infer it's parameter type by looking at the array of strings, here we 
+                    do not specify type of name, but also typescript infers it's type of name as string */
+    return name.toUpperCase();
+    //  return name.toFixed(); /* Property 'toFixed' does not exist on type 'string' */
+})
+
+const mixed=["Aashish",10,"Prem"];
+mixed.map(mix=>{  /* when we hover over mix, it show type of mix as string or number but method like toUpperCase does not work on number */
+    return mix.toUpperCase(); /* Property 'toUpperCase' does not exist on type 'string | number'. Property 'toUpperCase' does not exist on type 'number'. */ 
+})
 

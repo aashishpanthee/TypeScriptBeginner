@@ -61,3 +61,14 @@ var greetMe = function (name) {
     console.log("Greet me ".concat(name));
 };
 greetMe(); /* Output : Greet me stranger */
+// Function Return Type Annotation
+var add = function (a, b) {
+    return a + b;
+};
+var sum = add(10, 20); /* Output : 30 */
+var rando = function (a) {
+    if (Math.random() < 0.5) {
+        return a.toString();
+    }
+    return a;
+};

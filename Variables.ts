@@ -74,3 +74,18 @@ const greetMe=(name:string="stranger")=>{
     console.log(`Greet me ${name}`);
 }
 greetMe();      /* Output : Greet me stranger */
+
+// Function Return Type Annotation
+const add=(a:number,b:number):number=>{
+    return a+b;
+}
+let sum=add(10,20); /* Output : 30 */
+
+const rando=(a:number)=>{  /* Here typescript is smart enought to know that return type of this function could be string or number, by hovering function name , you could know that */
+    if(Math.random()<0.5){
+        return a.toString();
+    }
+    return a;
+}
+
+

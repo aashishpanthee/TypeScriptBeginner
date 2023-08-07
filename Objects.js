@@ -32,3 +32,10 @@ var printSong = function (song) {
 printSong(mysong);
 var person2 = { name: "Aashish", age: 22, grade: 12 };
 var person3 = { name: "Aashish", age: 22 }; /* this is also correct */
+var user = {
+    id: 123,
+    username: "Aashish"
+};
+console.log(user);
+console.log(user.id);
+/* user.id=333;     this will throw error because id is readonly */

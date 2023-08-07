@@ -87,5 +87,20 @@ type Person2={
 const person2:Person2={name:"Aashish",age:22,grade:12};
 const person3:Person2={name:"Aashish",age:22};  /* this is also correct */
 
+// Read Only Modifier
+
+type User={
+    readonly id:number;
+    username:string;
+}
+const user:User={
+    id:123,
+    username:"Aashish"
+}
+console.log(user);
+console.log(user.id);
+/* user.id=333;     this will throw error because id is readonly */
+
+
 
 

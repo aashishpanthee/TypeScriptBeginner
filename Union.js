@@ -64,3 +64,32 @@ mood = "sad";
 console.log(mood);
 var day = "Monday";
 // let day2:WeekendDays="Friday";  this will throw error because day2 can only be Monday,Tuesday or Wednesday
+// Union Types Exercise
+// Create a variable called highScore that can be a number OR a boolean
+var highScore;
+highScore = 23;
+highScore = false;
+// Create an array called stuffss
+// it can be an array of numbers OR array of strings
+// it cannot be an array of numbers and string (mixed together)
+var stuffss = [1, 2, 3];
+// let us take name of array different 
+var stuffff = ["hello", "aasish"];
+// Create an array called colors that can hold a mixture of RGB and HSL color types
+var colors = [];
+// Write a function called greet that accepts a single string OR an array of strings
+// It should print "Hello, <name>" for that single person OR greet each person in the array
+// with the same format
+var greet = function (name) {
+    if (typeof name === "string") {
+        console.log("Hello, ".concat(name));
+    }
+    else {
+        for (var _i = 0, name_1 = name; _i < name_1.length; _i++) {
+            var names = name_1[_i];
+            console.log("Hello, ".concat(names));
+        }
+    }
+};
+greet("aashish");
+greet(["aashish", "sumit", "ashok"]);

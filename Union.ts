@@ -91,3 +91,80 @@ type WeekendDays="Monday"|"Tuesday"|"Wednesday";
 let day:WeekendDays="Monday";
 // let day2:WeekendDays="Friday";  this will throw error because day2 can only be Monday,Tuesday or Wednesday
 
+// Union Types Exercise
+// Create a variable called highScore that can be a number OR a boolean
+let highScore:number|boolean;
+highScore=23;
+highScore=false;
+
+// Create an array called stuffss
+// it can be an array of numbers OR array of strings
+// it cannot be an array of numbers and string (mixed together)
+
+let stuffss:string[]|number[]=[1,2,3];
+// let us take name of array different 
+let stuffff:string[]|number[]=["hello","aasish"];
+/* let stuffa:Array<number|string>=[];
+let stuffa:(number|string)[]=[];
+this will allow mixed array of like number of string
+stuffa.push(1);
+stuffa.push("two"); */
+
+
+// Create a literal type called Skilllevel
+// There are 4 allowed values: "Beginner","Intermediate","Advanced","Expert";
+type Skilllevel="Beginner"|"Intermediate"|"Intermediate"|"Advanced"|"Expert"
+
+// Create a type called SkiSchoolStuent
+// name must be string
+// age must be number
+// sport must be 'ski' or 'snowboard'
+// level must be a value from the SkillLevel type
+
+type SkiSchoolStudent={
+    name:string;
+    age:number;
+    sport:"ski"|"snowboard";
+    level:Skilllevel;
+}
+
+// Define a type to represent an HSL color
+// r should be a number
+// s should be a number
+// l should be a number
+
+type HSL={
+    H:number;
+    S:number;
+    L:number;
+}
+// Define a type to represent an RGB color
+// R should be a number
+// G should be a number 
+// B should be a number
+
+type RGB={
+    R:number;
+    G:number;
+    B:number;
+}
+
+// Create an array called colors that can hold a mixture of RGB and HSL color types
+let colors:(HSL|RGB)[]=[]; 
+
+
+// Write a function called greet that accepts a single string OR an array of strings
+// It should print "Hello, <name>" for that single person OR greet each person in the array
+// with the same format
+
+const greet=(name:string|string[])=>{
+    if(typeof name ==="string"){
+        console.log(`Hello, ${name}`)
+    }else{
+        for(let names of name){
+            console.log(`Hello, ${names}`);
+        }
+    }
+}
+greet("aashish");
+greet(["aashish","sumit","ashok"]);

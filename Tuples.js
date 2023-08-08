@@ -12,4 +12,13 @@ var myTuple;
 myTuple = [1, "hello"];
 // myTuple=["hello",2] here we get an error because of the order of the types in the tuple
 var color = [255, 255, 1];
-// const color:[number,number,number]=[255,255,1,4]; it will cause error because we have only three numbers in the tuple
+// let status code
+var httpStatus = [200, "OK"];
+httpStatus.push(22); //yes, it is the limitation, now it doesn't follow the pattern.
+httpStatus.pop();
+httpStatus.pop();
+httpStatus.pop();
+httpStatus.pop();
+// this is just an exception. It is not a good practice to use push and pop in tuples.
+console.log(httpStatus);
+var response = [[200, "h"], [201, "created"]];

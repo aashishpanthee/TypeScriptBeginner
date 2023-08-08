@@ -66,3 +66,28 @@ coordinates1.push({x:433.44,y:434.33});
 coordinates1.push({lat:567.36,long:234.45});
 // coordinates1.push({lat:567.36,long:234.45,some:444}); this will throw error because some is not in the type Loc or Point 
 
+// Literal Types
+/* Literal types allow you to specify exactly what a variable can be.
+This is done by using the value as a type. */
+let zero:0=0;
+// zero=1;  this will throw error because zero can only be 0
+let hi:"hello"="hello";
+// hi="hi"; hi variable is of tyep "hello" so it can only be hello
+
+// A function with a literal + union type parameter
+// Literal types are not just types-but the values themselves too.
+const printText=(text:"aashish"|"sumit"|"ashok")=>{
+    console.log(`The name can be ${text}`);
+}
+printText("aashish");
+// printText("sujan");  assignment of type "sujan" parameter of type "aaashish" parameter is not applicable
+
+let mood:"happy"|"sad"="happy"; // mood can only be happy or sad
+// mood="angry";  this will throw error because mood can only be happy or sad
+mood="sad";
+console.log(mood);
+
+type WeekendDays="Monday"|"Tuesday"|"Wednesday";
+let day:WeekendDays="Monday";
+// let day2:WeekendDays="Friday";  this will throw error because day2 can only be Monday,Tuesday or Wednesday
+

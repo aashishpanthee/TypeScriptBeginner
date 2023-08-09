@@ -21,3 +21,11 @@ function isDelivered(status:OrderStatus){
     return status===OrderStatus.DELIVERED;
 }
 console.log(isDelivered(myStatus));
+
+enum Arrowkeys{
+    UP="up",
+    DOWN="down",
+    LEFT="left",
+    RIGHT="right",
+}
+Arrowkeys.UP;

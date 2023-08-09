@@ -20,3 +20,11 @@ function isDelivered(status) {
     return status === OrderStatus.DELIVERED;
 }
 console.log(isDelivered(myStatus));
+var Arrowkeys;
+(function (Arrowkeys) {
+    Arrowkeys["UP"] = "up";
+    Arrowkeys["DOWN"] = "down";
+    Arrowkeys["LEFT"] = "left";
+    Arrowkeys["RIGHT"] = "right";
+})(Arrowkeys || (Arrowkeys = {}));
+Arrowkeys.UP;

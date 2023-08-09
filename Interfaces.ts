@@ -59,5 +59,31 @@ const shoes:Product={
         return this.price;
     }
 }
-
 console.log(shoes.applyDiscount(0.6));
+
+// Re-Opening Interfaces
+
+// RE-OPENING TYPE ALIAS IN NOT POSSIBLE
+// for example this, Animal interface is coming from anothe file, now i want to add that interface in this file and add some more properties in it
+
+interface Animal{
+name:string;
+age:number;
+}
+
+
+// This below Animal interface is not overriding and overwriting the above Animal interface.,it's just adding more properties in it.
+interface Animal{
+    breed:string;
+    bark():string;
+}
+
+const coco:Animal={
+    name:"Coco",
+    age:1.5,
+    breed:"Cocor Spinal",
+    bark(){
+        return "Woof Woof"
+    }
+
+}

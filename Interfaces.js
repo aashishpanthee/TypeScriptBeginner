@@ -19,3 +19,11 @@ var shoes = {
     }
 };
 console.log(shoes.applyDiscount(0.6));
+var coco = {
+    name: "Coco",
+    age: 1.5,
+    breed: "Cocor Spinal",
+    bark: function () {
+        return "Woof Woof";
+    }
+};

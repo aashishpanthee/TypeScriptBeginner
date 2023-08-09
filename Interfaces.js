@@ -7,4 +7,5 @@ var person = {
 };
 var thomas = { name: "Thomas", age: 36, id: 223 };
 console.log(thomas);
-// thomas.id=555;  // Cannot assign to 'id' because it is a read-only property.
+var shelby = { name: "Thomas", age: 36, greet: function () { return "Hello"; } };
+console.log(shelby);

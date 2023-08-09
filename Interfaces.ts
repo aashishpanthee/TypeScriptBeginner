@@ -31,3 +31,13 @@ interface Person1{
 const thomas:Person1={name:"Thomas",age:36,id:223};
 console.log(thomas);
 // thomas.id=555;  // Cannot assign to 'id' because it is a read-only property.
+
+// Interface Methods
+
+interface Person2{
+    name:string;
+    age:number;
+    greet:()=>string;
+}
+const shelby:Person2={name:"Thomas",age:36,greet:()=>{return "Hello"}};
+console.log(shelby);

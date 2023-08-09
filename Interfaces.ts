@@ -18,3 +18,16 @@ const person:Person={
     name:"Aashish",
     age:22,
 }
+
+// We can add optional properties in interfaces as well
+
+interface Person1{
+   readonly id:number; //Readonly modifier
+    name:string;
+    age:number;
+    nickname?:string; // Optional property
+}
+
+const thomas:Person1={name:"Thomas",age:36,id:223};
+console.log(thomas);
+// thomas.id=555;  // Cannot assign to 'id' because it is a read-only property.

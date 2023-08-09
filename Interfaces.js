@@ -5,3 +5,6 @@ var person = {
     name: "Aashish",
     age: 22,
 };
+var thomas = { name: "Thomas", age: 36, id: 223 };
+console.log(thomas);
+// thomas.id=555;  // Cannot assign to 'id' because it is a read-only property.

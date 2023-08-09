@@ -50,3 +50,8 @@ var coco1 = {
     }
 };
 console.log(coco1);
+// Interfaces VS Type Aliases
+// We cannot reopen type aliases but we can reopen interfaces
+// We can extend interfaces but we cannot extend type aliases
+//                      BUT
+// Interfaces are used to shape only objects whereas type aliases are used to shape any type

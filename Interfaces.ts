@@ -41,3 +41,23 @@ interface Person2{
 }
 const shelby:Person2={name:"Thomas",age:36,greet:()=>{return "Hello"}};
 console.log(shelby);
+
+// Interface Method Parameters
+
+interface Product{
+    name:string;
+    price:number;
+    applyDiscount:(discount:number)=>number;
+}
+
+const shoes:Product={
+    name:"Nike",
+    price:200,
+    applyDiscount(amount:number){
+        const newPrice=this.price*(1-amount);
+        this.price=newPrice;
+        return this.price;
+    }
+}
+
+console.log(shoes.applyDiscount(0.6));

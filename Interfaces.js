@@ -27,3 +27,26 @@ var coco = {
         return "Woof Woof";
     }
 };
+var chewy = {
+    name: "Chewy",
+    age: 4.5,
+    breed: "Labrador",
+    bark: function () {
+        return "bark";
+    },
+    job: "bomb sniffer",
+};
+console.log(chewy);
+var coco1 = {
+    name: "Chewy",
+    age: 4.5,
+    breed: "Labrador",
+    bark: function () {
+        return "bark";
+    },
+    job: "bomb sniffer",
+    lookforDrugs: function () {
+        return "Drugs Drugs";
+    }
+};
+console.log(coco1);

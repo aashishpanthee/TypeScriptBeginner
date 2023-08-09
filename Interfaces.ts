@@ -87,3 +87,40 @@ const coco:Animal={
     }
 
 }
+
+// Extending Interfaces 
+
+interface ServiceDog extends Animal{
+job:"drug sniffer" |"bomb sniffer";
+}
+
+const chewy:ServiceDog={
+    name:"Chewy",
+    age:4.5,
+    breed:"Labrador",
+    bark(){
+        return "bark"
+    },
+    job:"bomb sniffer",
+}
+console.log(chewy); 
+
+// NOTE: WE CAN EXTEND MULTIPLE INTERFACES
+
+interface LookingDog extends Animal,ServiceDog{
+    lookforDrugs():string;
+}
+const coco1:LookingDog={
+    name:"Chewy",
+    age:4.5,
+    breed:"Labrador",
+    bark(){
+        return "bark"
+    },
+    job:"bomb sniffer",
+    lookforDrugs(){
+        return "Drugs Drugs"
+    }
+}
+console.log(coco1);
+

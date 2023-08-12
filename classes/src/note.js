@@ -45,3 +45,16 @@ player1.scores = 44;
 // This is how we set the value of the private field #score using setter method.
 console.log(player1);
 console.log(player2.fullName);
+
+class AdminPlayer extends Player {
+  constructor(firstname, lastname, powers) {
+    super(firstname, lastname);
+    // Here if we do not call super , then there will be error because which constructor will get what will not be define.
+    // here super is used to call the constructor of the parent class.
+    this.powers = powers;
+  }
+  isAdmin = true;
+}
+// This is how we inherit the properties of the parent class Player to the child class AdminPlayer using extends keyword.
+const player3 = new AdminPlayer("Prem", "Gautam", "Luchyang");
+console.log(player3);

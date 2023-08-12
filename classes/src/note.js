@@ -3,6 +3,10 @@ class Player {
   #score = 0;
   //  #score is now a private field of class Player, which cannot be accessed outside of the class but can be achived using methods inside of a class
   numLives = 20;
+
+  static description = "This is a player here";
+  // This description is a static property of the class Player. It is not the property of the individual objects created from the class Player.
+
   //   Constructor is a special method that is invoked when we create an instance of the class
   constructor(firstname, lastname) {
     this.firstname = firstname;

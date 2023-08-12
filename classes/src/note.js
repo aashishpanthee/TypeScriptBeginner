@@ -10,6 +10,14 @@ class Player {
     this.lastname = lastname;
     // firstname and lastname are the properties of the individual objects created from the class.
   }
+  // A getter is a special method that is used to retrieve the value of an object property.
+  // It looks like like it is method,, but it is not a method. It is a property of an object.
+  // we call it like , player1.fullName , not player1.fullName();
+  //   In this example, the fullName getter allows you to retrieve the value of the firstname and secondname property of an object.
+  get fullName() {
+    return `${this.firstname} ${this.lastname}`;
+  }
+
   //   Methods are the functions inside of a class{
   updateScore() {
     return (this.#score += 1);
@@ -27,3 +35,4 @@ console.log(player1.decreaseLife());
 console.log(player1.updateScore());
 // Particularly that #score is not accessible outside of class. If we try to access it like console.log(player1.#score) it will throw error.
 console.log(player1);
+console.log(player2.fullName);

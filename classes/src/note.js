@@ -17,6 +17,13 @@ class Player {
   get fullName() {
     return `${this.firstname} ${this.lastname}`;
   }
+  set scores(newscore) {
+    if (newscore < 0) {
+      throw new Error("Score cannot be less than 0");
+    }
+    this.#score = newscore;
+  }
+  // This setter method is used to set the value of the private field #score.
 
   //   Methods are the functions inside of a class{
   updateScore() {
@@ -34,5 +41,7 @@ console.log(player1);
 console.log(player1.decreaseLife());
 console.log(player1.updateScore());
 // Particularly that #score is not accessible outside of class. If we try to access it like console.log(player1.#score) it will throw error.
+player1.scores = 44;
+// This is how we set the value of the private field #score using setter method.
 console.log(player1);
 console.log(player2.fullName);

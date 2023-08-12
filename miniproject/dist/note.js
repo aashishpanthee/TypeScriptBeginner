@@ -18,3 +18,17 @@ btn?Listener('click',()=>{
 })
 This is using OPTIONAL CHAINING OPERATOR (!)
 */
+// Type Assertion
+// let mystery:unknown="HelloWorld!";
+// let numCharacter=(mystery as string).length;
+// This is type assertion
+//If we had not used type assertion , then it would show us type error that mystery is of type unknown. but we are making MYSTERY AS STRING using type assertion
+/*
+----------ANOTHER EXAMPLE OF TYPE ASSERTION-----------------
+const btn=document.getElementById('btn') as HTMLButtonElement;
+const input=document.getElementById('todoinput') as HTMLInputElement;
+btn?.addEventListener('click',()=>{
+    alert(input.value);
+    input.value="";
+})
+*/

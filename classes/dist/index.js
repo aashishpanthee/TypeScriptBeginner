@@ -2,6 +2,7 @@
 class Player {
     constructor(first, last) {
         this.score = 0;
+        this.age = 33;
         this.first = first;
         this.last = last;
     }

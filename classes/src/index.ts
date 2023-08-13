@@ -6,6 +6,10 @@ class Player{
     constructor(first:string,last:string){
         this.first=first;
         this.last=last;
+        this.secretMethod();
+    }
+    private secretMethod():void{
+        console.log("Secret Method")
     }
 }
 const doggy=new Player("CoCo","Panthee");

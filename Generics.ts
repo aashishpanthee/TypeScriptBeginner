@@ -50,3 +50,13 @@ function merge<T,U>(obj1:T,obj2:U){
 }
 const comboObj=merge({name:"Rahul"},{age:23});
 console.log(comboObj);
+
+interface Lengthy{
+    length:number;
+};
+function printDoubleLength<T extends Lengthy>(item:T):number{
+    return item.length*2;
+};
+console.log(printDoubleLength("Rahul"));
+console.log(printDoubleLength({length:44}));
+ 

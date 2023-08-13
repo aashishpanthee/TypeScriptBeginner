@@ -42,3 +42,11 @@ function getRandomElement<T>(list:T[]):T{
 }
 console.log(getRandomElement<string>(["a","b","c"]))
 console.log(getRandomElement<number>([1,2,3,5,6]))
+
+function merge<T,U>(obj1:T,obj2:U){
+    return {
+        ...obj1,...obj2
+    }
+}
+const comboObj=merge({name:"Rahul"},{age:23});
+console.log(comboObj);

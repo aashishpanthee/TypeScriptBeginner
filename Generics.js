@@ -1,3 +1,14 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 function numberIdentity(item) {
     return item;
 }
@@ -32,3 +43,8 @@ function getRandomElement(list) {
 }
 console.log(getRandomElement(["a", "b", "c"]));
 console.log(getRandomElement([1, 2, 3, 5, 6]));
+function merge(obj1, obj2) {
+    return __assign(__assign({}, obj1), obj2);
+}
+var comboObj = merge({ name: "Rahul" }, { age: 23 });
+console.log(comboObj);

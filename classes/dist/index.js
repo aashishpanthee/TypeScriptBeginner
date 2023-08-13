@@ -33,3 +33,25 @@ class newPlayer extends Player {
 const Nimo = new newPlayer("Ben", "Panthee");
 console.log(Nimo);
 console.log(Nimo.gettingName());
+class Animal {
+    constructor(color) {
+        this.color = color;
+        this.color = color;
+    }
+}
+const puppy = new Animal("blue");
+console.log(puppy);
+class Dog {
+    constructor(brand, color) {
+        this.brand = brand;
+        this.color = color;
+        this.color = color;
+        this.brand = brand;
+    }
+    print() {
+        console.log(`${this.color} is not printable`);
+    }
+}
+const lucky = new Dog("Prada", "Red");
+console.log(lucky);
+console.log(lucky.print());

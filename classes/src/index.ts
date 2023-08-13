@@ -34,3 +34,32 @@ class newPlayer extends Player{
 const Nimo=new newPlayer("Ben","Panthee");
 console.log(Nimo);
 console.log(Nimo.gettingName());
+
+
+interface Colorful{
+    color:string;
+}
+interface Printable{
+    print():void;
+}
+
+class Animal implements Colorful{
+    constructor(public color:string){
+        this.color=color;
+    }
+}
+const puppy=new Animal("blue");
+console.log(puppy);
+
+class Dog implements Colorful,Printable{
+    constructor(public brand:string,public color:string){
+        this.color=color;
+        this.brand=brand;
+    }
+    print():void{
+        console.log(`${this.color} is not printable`)
+    }
+}
+const lucky=new Dog("Prada","Red");
+console.log(lucky);
+console.log(lucky.print());
